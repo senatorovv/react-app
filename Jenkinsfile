@@ -9,13 +9,7 @@ pipeline {
 
   stages {
 
-    stage('Checkout Source') {
-      steps {
-        git 'https://github.com/senatorovv/react-app.git'
-      }
-    }
-
-    stage('Build image') {
+       stage('Build image') {
       steps{
         script {
           dockerImage = docker.build dockerimagename
